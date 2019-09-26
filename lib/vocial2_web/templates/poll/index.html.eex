@@ -1,0 +1,19 @@
+ 
+<%= for poll <- @polls do %>
+  <%= render("_poll.html", %{ poll: poll, conn: @conn }) %>
+<% end %>
+<br/>
+
+<div class="row">
+  <%= if @opts.include_prev_page do %>
+    <div class="column">
+      <%= link "<< Previous Page", to: Routes.poll_path(@conn, :index, [page: (@opts.page - 1), per_page: @opts.per_page]), class: "button"  %>
+    </div>
+  <% end %>
+
+  <%= if @opts.include_next_page do %>
+    <div class="column column-50 column-offset-25">
+      <%= link "Next Page >>", to: Routes.poll_path(@conn, :index, [page: (@opts.page + 1), per_page: @opts.per_page]), class: "button" %>
+    </div>
+  <% end %>
+</div>

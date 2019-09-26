@@ -1,0 +1,38 @@
+<div class="chat-window container well" id="enable-chat-channel" data-chatroom="<%= @chatroom %>">
+  <div class="row">
+    <div class="column">
+      <h4>Name:</h4>
+    </div>
+    <div class="column">
+      <input type="text" class="form-control author-input" placeholder="Name" />
+    </div>
+    <div class="column">
+      <button class="button join-chat">Join</button>
+    </div>
+  </div>
+
+  <div class="row chat-ui hidden">
+    <div class="column user-list">
+      <strong>Users</strong>
+      <ul class="username-list list-unstyled">
+      </ul>
+    </div>
+    <div class="column chat-display">
+      <strong>Messages</strong>
+      <ul class="list-unstyled chat-messages">
+        <%= for message <- @messages do %>
+          <li><span class="author">&lt;<%= message.author %>&gt;</span><span class="message"><%= message.message %></span></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row chat-ui hidden">
+    <div class="column">
+      <input type="text" class="form-control chat-input"/>
+    </div>
+    <div class="column">
+      <button class="btn btn-primary chat-send">Send</button>
+    </div>
+  </div>
+</div>

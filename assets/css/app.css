@@ -1,0 +1,64 @@
+/* This file is for your main application css. */
+
+@import "./phoenix.css";
+
+.navbar {
+  margin-bottom: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #606c76;
+}
+
+.navbar li {
+    float: left;
+    margin-bottom: 0;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    background-color: #ab5dda;
+}
+span.help-block {
+    color: #f00;
+}
+.user-list {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 500px;
+}
+.chat-window {
+    min-height: 200px;
+    margin-top: 20px;
+}
+.chat-display {
+    overflow-y: scroll;
+    max-height: 500px;
+}
+.user-list .idle {
+    color: #888;
+}
+.chat-display .author {
+    color: #f00;
+}
+.name-input {
+    margin-bottom: 10px;
+}
+.chat-display .status {
+    color: #888;
+    font-style: italic;
+}
+.hidden {
+    display: none !important;
+}

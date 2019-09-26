@@ -1,0 +1,5 @@
+<i id="enable-polls-channel" data-poll-id="<%= @poll.id %>"></i>
+<button id="polls-ping">Ping Websocket</button> 
+
+<%= render("_poll.html", %{poll: @poll, conn: @conn }) %>
+<%= render(Vocial2Web.SharedView, "_chat.html", messages: @poll.messages, chatroom: @poll.id) %>

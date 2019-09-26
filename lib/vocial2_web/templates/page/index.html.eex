@@ -1,0 +1,8 @@
+<div class="navbar">
+  <h2><%= gettext "Welcome to %{name}!", name: "Vocial2" %></h2>
+  <p>A social voting app!</p> 
+  <p>To create a new account, <%= link "click here", to: Routes.user_path(@conn, :new) %></p>
+  <p>To view the most recent, <%= link "click here", to: Routes.poll_path(@conn, :index) %></p>
+</div>
+
+<%= render(Vocial2Web.SharedView, "_chat.html", messages: @messages, chatroom: "lobby") %>

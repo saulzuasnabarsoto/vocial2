@@ -7,7 +7,7 @@
       <li><a href="/polls">Polls</a></li>
       <%= if user = Plug.Conn.get_session(@conn, :user) do %>
         <li><%= link "Welcome #{user.username}", to: Routes.user_path(@conn, :show, user.id) %></li>
-      <%= else %>  
+      <% else %>  
         <li><a href="/login">Login</a></li>
       <% end %>
     </ul>

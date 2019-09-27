@@ -10,7 +10,8 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :vocial2, Vocial2Web.Endpoint,
-  url: [host: "example.com", port: 80],
+  url: [host: "192.0.0.139", port: 4000],
+  #check_origin: false,
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production

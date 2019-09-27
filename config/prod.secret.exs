@@ -24,7 +24,8 @@ secret_key_base =
     """
 
 config :vocial2, Vocial2Web.Endpoint,
-  http: [:inet6, port: String.to_integer(System.get_env("PORT") || "4000")],
+ #http: [:inet6, port: String.to_integer(System.get_env("PORT") || "4000")],
+  http: ["192.0.0.139", port: String.to_integer(System.get_env("PORT") || "4000")],
   secret_key_base: secret_key_base
 
 # ## Using releases (Elixir v1.9+)
